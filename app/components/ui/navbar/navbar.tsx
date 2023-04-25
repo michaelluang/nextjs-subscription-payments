@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
-import Logo from '@/components/icons/logo';
+import Logo from '@/icons/logo';
 import { useUser } from '@/utils/useUser';
 
 import s from './navbar.module.css';

@@ -9,7 +9,7 @@ import { useUser } from '@/utils/useUser';
 
 import Layout from '@/components/layout';
 import LoadingDots from '@/components/ui/loading-dots';
-import Logo from '@/components/icons/logo';
+import Logo from '@/icons/logo';
 import { getURL } from '@/utils/helpers';
 
 const SignIn = () => {
@@ -20,7 +20,7 @@ const SignIn = () => {
     if (user) {
       router.replace('/account');
     }
-  }, [user]);
+  }, [user, router]);
 
   if (!user)
     return (
