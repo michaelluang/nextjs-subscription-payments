@@ -1,6 +1,5 @@
 'use client';
 
-import { useRouter } from "next/navigation";
 import { useEffect, useState, createContext, useContext } from 'react';
 import { User, Session, SupabaseClient } from '@supabase/supabase-js';
 import { createBrowserSupabaseClient } from '@supabase/auth-helpers-nextjs';
@@ -35,7 +34,7 @@ export const MyUserContextProvider = (props: Props) => {
   const [userDetails, setUserDetails] = useState<UserDetails | null>(null);
   const [subscription, setSubscription] = useState<Subscription | null>(null);
   const [supabaseClient] = useState(() =>
-    createBrowserSupabaseClient<SupabaseClient>()
+    createBrowserSupabaseClient()
   );
 
 	useEffect(() => {

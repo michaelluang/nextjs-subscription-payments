@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import Logo from '@/components/icons/logo';
 import { useUser } from '@/utils/useUser';
 
-import s from './Navbar.module.css';
+import s from './navbar.module.css';
 
 const Navbar = () => {
   const router = useRouter();
