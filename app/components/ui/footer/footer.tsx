@@ -33,6 +33,14 @@ export default function Footer() {
             </li>
             <li className="py-3 md:py-0 md:pb-4">
               <Link
+                href="/chat"
+                className="text-white hover:text-zinc-200 transition ease-in-out duration-150"
+              >
+                Chat
+              </Link>
+            </li>
+            <li className="py-3 md:py-0 md:pb-4">
+              <Link
                 href="/"
                 className="text-white hover:text-zinc-200 transition ease-in-out duration-150"
               >
@@ -53,14 +61,6 @@ export default function Footer() {
                 className="text-white hover:text-zinc-200 transition ease-in-out duration-150"
               >
                 Blog
-              </Link>
-            </li>
-            <li className="py-3 md:py-0 md:pb-4">
-              <Link
-                href="/"
-                className="text-white hover:text-zinc-200 transition ease-in-out duration-150"
-              >
-                Support
               </Link>
             </li>
           </ul>
@@ -86,6 +86,14 @@ export default function Footer() {
                 className="text-white hover:text-zinc-200 transition ease-in-out duration-150"
               >
                Help
+              </Link>
+            </li>
+            <li className="py-3 md:py-0 md:pb-4">
+              <Link
+                href="/"
+                className="text-white hover:text-zinc-200 transition ease-in-out duration-150"
+              >
+               Support
               </Link>
             </li>
             <li className="py-3 md:py-0 md:pb-4">
