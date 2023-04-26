@@ -95,7 +95,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4 bg-zinc-900">
-        <div>
+        <div className="text-white">
           <span>&copy; 2020 ACME, Inc. All rights reserved.</span>
         </div>
         <div className="flex items-center">

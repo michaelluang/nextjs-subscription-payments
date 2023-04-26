@@ -94,7 +94,8 @@ body {
   padding: 0;
   height: var(--full-height);
   width: 100vw;
-  // display: flex;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   user-select: none;
@@ -123,53 +124,8 @@ body {
   border: 1px solid transparent;
 }
 
-select {
-  border: var(--border-in-light);
-  padding: 10px;
-  border-radius: 10px;
-  appearance: none;
-  cursor: pointer;
-  background-color: var(--white);
-  color: var(--black);
-  text-align: center;
-}
-
 label {
   cursor: pointer;
-}
-
-input {
-  text-align: center;
-  font-family: inherit;
-}
-
-input[type="checkbox"] {
-  cursor: pointer;
-  background-color: var(--white);
-  color: var(--black);
-  appearance: none;
-  border: var(--border-in-light);
-  border-radius: 5px;
-  height: 16px;
-  width: 16px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-input[type="checkbox"]:checked::after {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background-color: var(--primary);
-  content: " ";
-  border-radius: 2px;
-}
-
-input[type="range"] {
-  appearance: none;
-  background-color: var(--white);
-  color: var(--black);
 }
 
 @mixin thumb() {
@@ -182,6 +138,12 @@ input[type="range"] {
   transition: all ease 0.3s;
   margin-left: 5px;
   border: none;
+}
+
+input[type="range"] {
+  appearance: none;
+  background-color: var(--white);
+  color: var(--black);
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -211,21 +173,6 @@ input[type="range"]::-moz-range-thumb:hover {
 
 input[type="range"]::-ms-thumb:hover {
   @include thumbHover();
-}
-
-input[type="number"],
-input[type="text"],
-input[type="password"] {
-  appearance: none;
-  border-radius: 10px;
-  border: var(--border-in-light);
-  min-height: 36px;
-  box-sizing: border-box;
-  background: var(--white);
-  color: var(--black);
-  padding: 0 10px;
-  max-width: 50%;
-  font-family: inherit;
 }
 
 div.math {

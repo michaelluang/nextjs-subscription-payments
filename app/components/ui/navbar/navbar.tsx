@@ -30,6 +30,9 @@ const Navbar = () => {
 							<Link href="/account" className={s.link}>
                 Account
               </Link>
+							<Link href="/chat" className={s.link}>
+                Chat
+              </Link>
             </nav>
           </div>
 
@@ -39,7 +42,6 @@ const Navbar = () => {
                 className={s.link}
                 onClick={async () => {
                   await supabaseClient.auth.signOut();
-                  router.push('/signin');
                 }}
               >
                 Sign out

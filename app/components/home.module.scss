@@ -24,6 +24,60 @@
   @include container();
 }
 
+.container {
+	select {
+		border: var(--border-in-light);
+		padding: 10px;
+		border-radius: 10px;
+		appearance: none;
+		cursor: pointer;
+		background-color: var(--white);
+		color: var(--black);
+		text-align: center;
+	}
+	input {
+		text-align: center;
+		font-family: inherit;
+	}
+	input[type="checkbox"] {
+		cursor: pointer;
+		background-color: var(--white);
+		color: var(--black);
+		appearance: none;
+		border: var(--border-in-light);
+		border-radius: 5px;
+		height: 16px;
+		width: 16px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	input[type="checkbox"]:checked::after {
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		background-color: var(--primary);
+		content: " ";
+		border-radius: 2px;
+	}
+
+	input[type="number"],
+	input[type="text"],
+	input[type="password"] {
+		appearance: none;
+		border-radius: 10px;
+		border: var(--border-in-light);
+		min-height: 36px;
+		box-sizing: border-box;
+		background: var(--white);
+		color: var(--black);
+		padding: 0 10px;
+		max-width: 50%;
+		font-family: inherit;
+	}
+}
+
 @media only screen and (min-width: 600px) {
   .tight-container {
     --window-width: 100vw;
