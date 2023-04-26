@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
 import { Auth } from '@supabase/auth-ui-react';
 import { ThemeSupa } from '@supabase/auth-ui-shared';
@@ -14,13 +14,16 @@ import { getURL } from '@/utils/helpers';
 
 const SignIn = () => {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const {user, supabaseClient} = useUser();
+  console.log('sssss', searchParams);
 
   useEffect(() => {
     if (user) {
-      router.replace('/account');
+      let next = searchParams && searchParams.get('next');
+      router.replace(next || '/account');
     }
-  }, [user, router]);
+  }, [user, router, searchParams]);
 
   if (!user)
     return (

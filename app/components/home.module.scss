@@ -1,5 +1,5 @@
-@import "./window.scss";
-@import "../styles/animation.scss";
+@import "@/components/window.scss";
+@import "@/styles/animation.scss";
 
 @mixin container {
   background-color: var(--white);

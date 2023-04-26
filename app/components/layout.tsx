@@ -7,7 +7,7 @@ export default function Home({
 	children: React.ReactNode;
 }) {
   return (
-    <div className="bg-black w-full overflow-scroll">
+    <div className="bg-black w-full h-full overflow-scroll">
       <Navbar />
       <main id="skip">{children}</main>
       <Footer />

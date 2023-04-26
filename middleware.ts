@@ -6,7 +6,7 @@ import md5 from 'spark-md5';
 import type { Database } from 'types-db'
 
 export const config = {
-  matcher: ["/api/openai", "/api/chat-stream", "/chat/:path*"],
+  matcher: ["/api/openai", "/api/chat-stream"],
 };
 
 const serverConfig = getServerSideConfig();
@@ -23,6 +23,7 @@ function getIP(req: NextRequest) {
 }
 
 export async function middleware(req: NextRequest) {
+  console.log('rrrrqqqqq', req.nextUrl.pathname);
 	const accessCode = req.headers.get("access-code");
   const token = req.headers.get("token");
   const hashedCode = md5.hash(accessCode ?? "").trim();
@@ -81,16 +82,6 @@ export async function middleware(req: NextRequest) {
   if (session?.user) {
     return res;
   }
-
-  // Auth condition not met, redirect to home page.
-	const pathname = req.nextUrl.pathname;
-	if (pathname.startsWith("/chat")) {
-		const redirectUrl = req.nextUrl.clone();
-		redirectUrl.pathname = '/signin';
-		redirectUrl.searchParams.set(`redirectedFrom`, req.nextUrl.pathname);
-		return NextResponse.redirect(redirectUrl);
-	}
-
 
 	return NextResponse.json(
 		{

@@ -38,7 +38,7 @@ export default function Account() {
   const { isLoading, subscription, user, userDetails } = useUser();
 
 	if (!isLoading && !user) {
-		return redirect('/signin');
+		return redirect('/signin?next=/account');
 	}
 
   const redirectToCustomerPortal = async () => {
