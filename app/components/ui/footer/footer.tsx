@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 import Logo from '@/icons/logo';
 import GitHub from '@/icons/github';
@@ -19,7 +18,7 @@ export default function Footer() {
             <span className="rounded-full border border-zinc-700 mr-2">
               <Logo />
             </span>
-            <span>ACME</span>
+            <span>Teabot</span>
           </Link>
         </div>
         <div className="col-span-1 lg:col-span-2">
@@ -37,7 +36,7 @@ export default function Footer() {
                 href="/"
                 className="text-white hover:text-zinc-200 transition ease-in-out duration-150"
               >
-                About
+                Pricing
               </Link>
             </li>
             <li className="py-3 md:py-0 md:pb-4">
@@ -45,7 +44,7 @@ export default function Footer() {
                 href="/"
                 className="text-white hover:text-zinc-200 transition ease-in-out duration-150"
               >
-                Careers
+                About
               </Link>
             </li>
             <li className="py-3 md:py-0 md:pb-4">
@@ -56,14 +55,38 @@ export default function Footer() {
                 Blog
               </Link>
             </li>
+            <li className="py-3 md:py-0 md:pb-4">
+              <Link
+                href="/"
+                className="text-white hover:text-zinc-200 transition ease-in-out duration-150"
+              >
+                Support
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="col-span-1 lg:col-span-2">
           <ul className="flex flex-initial flex-col md:flex-1">
             <li className="py-3 md:py-0 md:pb-4">
               <p className="text-white font-bold hover:text-zinc-200 transition ease-in-out duration-150">
-                LEGAL
+                Resources
               </p>
+            </li>
+            <li className="py-3 md:py-0 md:pb-4">
+              <Link
+                href="/"
+                className="text-white hover:text-zinc-200 transition ease-in-out duration-150"
+              >
+               Docs
+              </Link>
+            </li>
+            <li className="py-3 md:py-0 md:pb-4">
+              <Link
+                href="/"
+                className="text-white hover:text-zinc-200 transition ease-in-out duration-150"
+              >
+               Help
+              </Link>
             </li>
             <li className="py-3 md:py-0 md:pb-4">
               <Link
@@ -87,7 +110,7 @@ export default function Footer() {
           <div className="flex space-x-6 items-center h-10">
             <a
               aria-label="Github Repository"
-              href="https://github.com/vercel/nextjs-subscription-payments"
+              href="https://github.com/teabot-ai"
             >
               <GitHub />
             </a>
@@ -96,7 +119,7 @@ export default function Footer() {
       </div>
       <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4 bg-zinc-900">
         <div className="text-white">
-          <span>&copy; 2020 ACME, Inc. All rights reserved.</span>
+          <span>&copy; 2023 Teabot AI</span>
         </div>
         <div className="flex items-center">
           <span className="text-white">Crafted by</span>
