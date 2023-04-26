@@ -27,7 +27,7 @@ import {
 import { SideBar } from "@/components/sidebar";
 import { useAppConfig } from "../store/config";
 
-export function Loading(props: { noLogo?: boolean }) {
+function Loading(props: { noLogo?: boolean }) {
   return (
     <div className={styles["loading-content"] + " no-dark"}>
       {!props.noLogo && <BotIcon />}
@@ -40,7 +40,7 @@ const Settings = dynamic(async () => (await import("@/components/settings")).Set
   loading: () => <Loading noLogo />,
 });
 
-export function useSwitchTheme() {
+function useSwitchTheme() {
   const config = useAppConfig();
 
   useEffect(() => {
