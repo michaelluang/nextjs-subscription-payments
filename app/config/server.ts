@@ -1,4 +1,4 @@
-import md5 from 'spark-md5';
+import md5 from "spark-md5";
 
 declare global {
   namespace NodeJS {
@@ -7,6 +7,7 @@ declare global {
       CODE?: string;
       PROXY_URL?: string;
       VERCEL?: string;
+      HIDE_USER_API_KEY?: string; // disable user's api key input
     }
   }
 }
@@ -38,6 +39,6 @@ export const getServerSideConfig = () => {
     needCode: ACCESS_CODES.size > 0,
     proxyUrl: process.env.PROXY_URL,
     isVercel: !!process.env.VERCEL,
+    hideUserApiKey: !!process.env.HIDE_USER_API_KEY,
   };
 };
-

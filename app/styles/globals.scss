@@ -1,3 +1,6 @@
+@import "./animation.scss";
+@import "./window.scss";
+
 @mixin light {
   --theme: light;
 
@@ -95,10 +98,10 @@ body {
   height: var(--full-height);
   width: 100vw;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   user-select: none;
+  touch-action: pan-x pan-y;
   font-family: "Noto Sans SC", "SF Pro SC", "SF Pro Text", "SF Pro Icons",
     "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
@@ -124,6 +127,17 @@ body {
   border: 1px solid transparent;
 }
 
+select {
+  border: var(--border-in-light);
+  padding: 10px;
+  border-radius: 10px;
+  appearance: none;
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--black);
+  text-align: center;
+}
+
 label {
   cursor: pointer;
 }
@@ -138,12 +152,6 @@ label {
   transition: all ease 0.3s;
   margin-left: 5px;
   border: none;
-}
-
-input[type="range"] {
-  appearance: none;
-  background-color: var(--white);
-  color: var(--black);
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -257,4 +265,37 @@ pre {
   pre {
     overflow: auto;
   }
+}
+
+.password-input-container {
+  max-width: 50%;
+  display: flex;
+  justify-content: flex-end;
+
+  .password-eye {
+    margin-right: 4px;
+  }
+
+  .password-input {
+    min-width: 80%;
+  }
+}
+
+.user-avatar {
+  height: 30px;
+  min-height: 30px;
+  width: 30px;
+  min-width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border-in-light);
+  box-shadow: var(--card-shadow);
+  border-radius: 10px;
+}
+
+.one-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
